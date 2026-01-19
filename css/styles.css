@@ -1,3 +1,40 @@
+/* Variables */
+:root {
+  /* Colors */
+  --color-title: #d68c67;
+  --color-subtitle: #4f7290;
+  --color-primary: #fd8427;
+  --color-secondary: #6296c3;
+  --color-active: #d68c67;
+  --color-text: #000000;
+  --color-btn-text: #ffffff;
+  --color-bg: #ffffff;
+
+  /* Fonts */
+  --font-base: 'PT Sans', Arial, sans-serif;
+  --font-heading: 'Bernier Distressed', serif;
+
+  /* Font sizes */
+  --fs-base: 16px;
+  --fs-sm: 14px;
+  --fs-lg: 18px;
+  --fs-h1: 52px;
+  --fs-h2: 36px;
+
+  /* Spacing */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 80px;
+
+  /* UI */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-header: 0 10px 30px rgba(0,0,0,0.1);
+  --shadow-card: 0 15px 40px rgba(0,0,0,.08);
+}
+
 /* Fonts */
 @font-face {
   font-family: 'PT Sans';
@@ -17,14 +54,61 @@
 }
 
 /* Basic */
-
 body {
-  font-family: 'PT Sans', Arial, sans-serif;
-  color: #2b2b2b;
+  font-family: var(--font-base);
+  color: var(--color-text);
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Bernier Distressed', serif;
-  font-weight: 400;
+  font-family: var(--font-heading);
+  color: var(--color-title);
+  font-weight: 700;
 }
 
+/* Header */
+.header {
+  z-index: 1000;
+}
+
+.navbar {
+  height: 60px;
+  padding: 0;
+  background-color: var(--color-bg);
+  box-shadow: var(--shadow-header);
+}
+
+.navbar-brand img {
+  height: 42px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: var(--fs-base);
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--color-active);
+}
+
+.nav-social img {
+  width: 30px;
+  height: 30px;
+  margin-left: 16px;
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    height: auto;
+    padding: 0.25rem 1rem;
+  }
+
+  .nav-link, .nav-social {
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+
+  .nav-social img {
+    margin: 0;
+  }
+}
