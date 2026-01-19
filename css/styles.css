@@ -298,7 +298,7 @@ h2 {
 
 /* Materials */
 .materials {
-  padding-top: 100px;
+  padding: 100px 0 60px;
 }
 
 .materials-title {
@@ -398,6 +398,110 @@ h2 {
   }
 }
 
+/* Tariffs */
+.tariffs {
+  padding-top: 100px;
+  min-height: 1353px;
+  background-image: url('../assets/img/tariffs-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tariffs-cards {
+  padding-top: 50px;
+}
+
+.tariffs-card {
+  padding-bottom: 30px;
+  background-color: var(--color-bg);
+}
+
+.tariffs-card-title {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 30px;
+  color: var(--color-bg);
+  background-color: var(--color-subtitle);
+}
+
+.tariffs-card-content {
+  padding-inline: 15px;
+}
+
+.tariffs-card-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+.tariffs-card-list {
+  padding: 0 0 0 15px;
+}
+
+.tariffs-card-item {
+  padding: 8px 0;
+  line-height: 1.1;
+}
+
+.tariffs-card-item-icon {
+  position: relative;
+  top: -2px;
+  width: 20px;
+  height: auto;
+}
+
+.tariffs-card-item.cross-text {
+  opacity: 0.6;
+}
+
+.tariffs-card-item::marker {
+  color: var(--color-primary);
+}
+
+.tariffs-card-item-price {
+  color: var(--color-subtitle);
+  text-align: center;
+}
+
+.tariffs-card-item-price--old {
+  font-size: 20px;
+}
+
+.tariffs-card-item-price--new {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.tariffs-card-item-price-actions {
+  padding: 15px 0 30px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.tariffs-card-item-price-btn {
+  padding: 4px 7px;
+  background-color: var(--color-primary);
+  color: var(--color-btn-text);
+  border: none;
+  border-radius: 2px;
+  line-height: 1;
+  font-size: 18px;
+  opacity: 0.6;
+}
+
+.tariffs-card-item-price-btn.is-active {
+  opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+  .tariffs-cards {
+    gap: 80px;
+  }
+}
+
 /* Buttons */
 .btn-gradient {
   position: relative;
@@ -449,4 +553,8 @@ h2 {
 /* Helpers */
 .text-accent {
   color: var(--color-subtitle);
+}
+
+.cross-text {
+  text-decoration: line-through;
 }
