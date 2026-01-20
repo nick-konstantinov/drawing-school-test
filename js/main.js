@@ -77,9 +77,14 @@ $(function () {
     if (targetId.length > 1 && $(targetId).length) {
       e.preventDefault();
 
-      $('html, body').animate({
-        scrollTop: $(targetId).offset().top - HEADER_HEIGHT
-      }, 600);
+      $('html, body').animate(
+        {
+          scrollTop: $(targetId).offset().top - HEADER_HEIGHT
+        },
+        600
+      );
+
+      $('.navbar-collapse').collapse('hide');
     }
   });
 });
