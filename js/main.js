@@ -66,3 +66,20 @@ $(function () {
     setUsd($(this).closest('.tariffs-card'));
   });
 });
+
+// Smooth Scroll
+$(function () {
+  const HEADER_HEIGHT = $('.navbar').outerHeight();
+
+  $('a[href^="#"]').on('click', function (e) {
+    const targetId = $(this).attr('href');
+
+    if (targetId.length > 1 && $(targetId).length) {
+      e.preventDefault();
+
+      $('html, body').animate({
+        scrollTop: $(targetId).offset().top - HEADER_HEIGHT
+      }, 600);
+    }
+  });
+});
